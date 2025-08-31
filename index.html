@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
-    <script src="script.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon bmi 32.png"/>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body> 
      <nav>
-        <!-- icon -->
+        <div class="logo"><img src="assets/icon bmi 32.png" alt="BMI Calculator" /></div>
         <h1>BMI Calculator</h1>
     </nav>
     <section class="main-content-calc">
@@ -20,30 +21,27 @@
                 <form id="bmiform">
                     <div class="bmi-form">
                         <label for="weight">Berat Badan (kg) : </label>
-                        <input type="number" id="weight" placeholder="" min="1" max="300" step="0.1" required>
+                        <input type="number" id="weight" placeholder="" min="1" max="300" step="1" required>
                         
                     </div>
                     
                     <div class="bmi-form">
                         <label for="height">Tinggi Badan (cm) : </label>
-                        <input type="number" id="height" placeholder="" min="1" max="300" step="0.1" required>
+                        <input type="number" id="height" placeholder="" min="1" max="300" step="1" required>
                     </div>
                     
-                    <button type="submit" class="calculate-btn">Hitung BMI</button>
+                    <button type="submit" id="calculate-btn" class="calculate-btn">Hitung BMI</button>
                 </form>
             </div>
             <div class="bmi-result-box">
                 <div class="bmi-meter">
-                    <!-- image -->
-                    <div class="bmi-meter-category">BMI</div>
+                    <div id="bmi-meter-img" class="bmi-meter-img"><img src="assets/normal.png" alt="BMI"></div>
+                    <div id="bmi-meter-category" class="bmi-meter-category">BMI</div>
                 </div>
                 
                 <div class="bmi-result-text">
-                    <p class="bmi-category">
-                        BMI (Body Mass Index) dihitung dari berat badan dan tinggi badan, untuk menunjukkan apakah tubuh kamu berada dalam kategori <em>underweight</em>, normal, <em>overweight</em>, atau <em>obesity</em>.
-                    </p>
-                    <p class="bmi-text">
-                        BMI bermanfaat sebagai indikator awal untuk memahami kondisi tubuh sebelum dilakukan pemeriksaan lebih lanjut.
+                    <p id="bmi-category" class="bmi-category">
+                        BMI (Body Mass Index) dihitung dari berat badan dan tinggi badan, untuk menunjukkan apakah tubuh kamu berada dalam kategori <em>underweight</em>, normal, <em>overweight</em>, atau <em>obesity</em>. BMI bermanfaat sebagai indikator awal untuk memahami kondisi tubuh sebelum dilakukan pemeriksaan lebih lanjut.
                     </p>
                         </div>
                     </div>
@@ -56,9 +54,9 @@
         <div class="faq-1">
             <p class="faq-q">Bagaimana Cara Menggunakan BMI Kalkulator?</p>
             <ul>
-                <li>Masukkan berat badan dalam kilogram</li>
-                <li>Masukkan tinggi badan dalam sentimeter</li>
-                <li>Klik tombol Hitung BMI untuk melihat hasilmu</li>
+                <li>1. Masukkan berat badan dalam kilogram</li>
+                <li>2. Masukkan tinggi badan dalam sentimeter</li>
+                <li>3. Klik tombol Hitung BMI untuk melihat hasilmu</li>
                 <li>Rumus BMI = Berat Badan / (Tinggi Badan/100)²</li>
             </ul>
         </div>
@@ -67,10 +65,10 @@
             <p class="faq-q">Bagaimana pengkategorian BMI?</p>
             <p>BMI dibagi ke dalam beberapa kategori sebagai berikut:</p>
             <ul>
-                <li>Underweight: BMI di bawah 18,5</li>
-                <li>Normal: BMI antara 18,5 - 24,9</li>
-                <li>Overweight: BMI antara 25 - 29,9</li>
-                <li>Obesity: BMI 30 atau lebih</li>
+                <li>- Underweight: BMI di bawah 18,5</li>
+                <li>- Normal: BMI antara 18,5 - 24,9</li>
+                <li>- Overweight: BMI antara 25 - 29,9</li>
+                <li>- Obesity: BMI 30 atau lebih</li>
             </ul>
         </div>
     </section>
