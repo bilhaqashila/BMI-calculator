@@ -1,7 +1,8 @@
-
 body {
     font-family: sans-serif;
     background: #99D6EA;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -128,8 +129,9 @@ nav h1 {
 }
 
 .bmi-meter img {
-    width: 220px;
-    height: 119px;
+    width: 180px;
+    min-width: 50px;
+    height: auto;
     position: relative;
 }
 
