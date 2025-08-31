@@ -16,8 +16,8 @@ calcBtn.addEventListener("click", function(event) {
         alert("Silakan isi berat badan dan tinggi badan kamu 🙂");
         return;
     }
-    
-    let bmi = weight / (height/100^2);
+    let height2 = (height / 100) * (height / 100); 
+    let bmi = weight / height2;
     bmi = Math.round(bmi*10) / 10;
     metercat.textContent = "BMI: " + bmi;
 
